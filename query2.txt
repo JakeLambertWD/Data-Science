@@ -1,0 +1,6 @@
+SELECT COUNT(l.id), ar.name 
+FROM area ar JOIN label l ON  ar.id = l.area  
+JOIN area_type at ON at.id = ar.type
+WHERE at.name = 'Country'
+GROUP BY ar.name
+ORDER BY ar.name;

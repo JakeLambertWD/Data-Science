@@ -1,0 +1,5 @@
+SELECT COUNT(a.id), ar.name 
+FROM artist a JOIN area ar ON  ar.id = a.area 
+JOIN area_type at ON at.id = ar.type
+WHERE at.name = 'Country' 
+GROUP BY ar.name;
